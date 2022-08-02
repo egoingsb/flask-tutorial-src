@@ -2,8 +2,9 @@
     <body>
         <h1><a href="/">WEB</a></h1>
         <ol>
-            <li><a href="/read/1">html</a></li>
-            <li><a href="/read/2">css</a></li>
+            {% for topic in topics %}
+                <li><a href="/read/{{ topic.id }}">{{ topic.title }}</a></li>
+            {% endfor %}
         </ol>
         {%block content %}{% endblock %}
     </body>
